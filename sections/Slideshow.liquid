@@ -1,0 +1,148 @@
+{{ 'flickity.css' | asset_url | stylesheet_tag }}
+
+<div class="slideshow page-width">
+  <div class="slideshow__wrapper" data-flickity='{ "cellAlign": "left", autoPlay: true, "contain": true,wrapAround: true
+        }'>
+    {% for block in section.blocks %}
+      {% if block.settings.image != null %}
+        <div class="slideshow__image">
+          {% render 'image', class: "" mobileSrc: block.settings.mobile_image, desktopSrc: block.settings.image %}
+        {% endif %}
+        <div class="slideshow__content flex {{block.settings.text_position}}">
+          <div>
+            <div class="h3 text-light">{{ block.settings.sub_heading1 }}</div>
+            <h2 class="h1 text-light">{{ block.settings.heading }}</h2>
+            <div class="h3 text-light">{{ block.settings.sub_heading2 }}</div>
+            <div>
+              <a class="button button--secondary" href="{{block.settings.button_link1}}">{{ block.settings.button_text1 }}</a>
+              <a class="button button--secondary" href="{{block.settings.button_link2}}">{{ block.settings.button_text2 }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .slideshow__image {
+    position: relative;
+  }
+  .text-light {
+    color: #ffffff;
+    font-weight: 700;
+  }
+  .slideshow__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Slideshow",
+    "class": "Slideshow",
+    "tag": "section",
+    "blocks": [
+      {
+        "name": "Slide",
+        "type": "slide",
+        "limit": 6,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "2048 x 1024px recommended"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Image",
+            "info": "1024 x 1024px recommended"
+          },
+          {
+            "type": "richtext",
+            "label": "Subheading",
+            "id": "sub_heading1",
+            "default": "<p>Tell your story</p>"
+          },
+          {
+            "type": "text",
+            "label": "Heading",
+            "id": "heading",
+            "default": "Heading Text"
+          }, {
+            "type": "richtext",
+            "label": "Subheading2",
+            "id": "sub_heading2",
+            "default": "<p>Subheading</p>"
+          }, {
+            "type": "text",
+            "id": "button_text1",
+            "label": "Button 1 text",
+            "default": "Shop this"
+          }, {
+            "type": "url",
+            "id": "button_link1",
+            "label": "Shop all"
+          }, {
+            "type": "text",
+            "id": "button_text2",
+            "label": "Button 2 text",
+            "default": "Shop this"
+          }, {
+            "type": "url",
+            "id": "button_link2",
+            "label": "Shop all"
+          }, {
+            "type": "select",
+            "id": "text_position",
+            "label": "Text overlay position",
+            "options": [
+              {
+                "value": "align-start justify-start",
+                "label": "Top left"
+              },
+              {
+                "value": "align-start justify-center",
+                "label": "Top center"
+              },
+              {
+                "value": "align-start justify-end",
+                "label": "Top right"
+              },
+              {
+                "value": "align-center justify-start",
+                "label": "Middle left"
+              }, {
+                "value": "align-center justify-center",
+                "label": "Middle center"
+              }, {
+                "value": "align-center justify-end",
+                "label": "Middle right"
+              }, {
+                "value": "align-end justify-start",
+                "label": "Bottom left"
+              }, {
+                "value": "align-end justify-center",
+                "label": "Bottom center"
+              }, {
+                "value": "align-end justify-end",
+                "label": "Bottom right"
+              }
+            ],
+            "default": "align-start justify-start"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Slideshow"
+      }
+    ]
+  }
+{% endschema %}
