@@ -1,11 +1,5 @@
 {
   "sections": {
-    "main": {
-      "type": "main-skeleton",
-      "disabled": true,
-      "settings": {
-      }
-    },
     "516c2a57-7bef-4d2c-bbc5-626ea2dcfe7c": {
       "type": "Slideshow",
       "blocks": {
@@ -62,10 +56,15 @@
       ],
       "settings": {
       }
+    },
+    "main": {
+      "type": "main-skeleton",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main",
-    "516c2a57-7bef-4d2c-bbc5-626ea2dcfe7c"
+    "516c2a57-7bef-4d2c-bbc5-626ea2dcfe7c",
+    "main"
   ]
 }
