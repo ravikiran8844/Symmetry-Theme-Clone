@@ -2,11 +2,70 @@
   "sections": {
     "main": {
       "type": "main-skeleton",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "516c2a57-7bef-4d2c-bbc5-626ea2dcfe7c": {
+      "type": "Slideshow",
+      "blocks": {
+        "8ffaac7b-92dd-4f49-ab72-03f57010d6c3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/swim-balc_1512x_90b4a936-959a-4c72-9eb8-9d42f22506ab.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/planet_540x_0b89a44e-d492-4a89-9c5f-198bbed8689e.jpg",
+            "sub_heading1": "<p>Tell your story<\/p>",
+            "heading": "Heading Text",
+            "sub_heading2": "<p>Subheading<\/p>",
+            "button_text1": "Shop this",
+            "button_link1": "shopify:\/\/products\/duo-tone-mid-length-dress",
+            "button_text2": "Shop this",
+            "button_link2": "shopify:\/\/products\/maxi-belted-dress",
+            "text_position": "align-start justify-start"
+          }
+        },
+        "571c3d73-7f2b-4268-b27f-b68aac561ed4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bswim-slide_1512x_be624fdb-1eaf-487b-8e01-5d9bd4321c1c.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/story2_540x_dd40f277-4aef-4869-87fd-4900f0adf2f1.jpg",
+            "sub_heading1": "<p>Tell your story<\/p>",
+            "heading": "Heading Text",
+            "sub_heading2": "<p>Subheading<\/p>",
+            "button_text1": "Shop this",
+            "button_link1": "shopify:\/\/products\/maxi-belted-dress",
+            "button_text2": "Shop this",
+            "button_link2": "shopify:\/\/collections\/all",
+            "text_position": "align-start justify-start"
+          }
+        },
+        "dc4bb74d-491c-47b1-b533-d8e2d795e2be": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/chantilly-slide-3_1728x_b13f16da-69cf-4bd0-bd61-c3b65aef37bc.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/162040110_126591512690235_2650967926924190660_n.jpg",
+            "sub_heading1": "<p>Tell your story<\/p>",
+            "heading": "Heading Text",
+            "sub_heading2": "<p>Subheading<\/p>",
+            "button_text1": "Shop this",
+            "button_link1": "shopify:\/\/products\/duo-tone-mid-length-dress",
+            "button_text2": "Shop this",
+            "button_link2": "shopify:\/\/collections\/all",
+            "text_position": "align-start justify-start"
+          }
+        }
+      },
+      "block_order": [
+        "8ffaac7b-92dd-4f49-ab72-03f57010d6c3",
+        "571c3d73-7f2b-4268-b27f-b68aac561ed4",
+        "dc4bb74d-491c-47b1-b533-d8e2d795e2be"
+      ],
       "settings": {
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "516c2a57-7bef-4d2c-bbc5-626ea2dcfe7c"
   ]
 }
